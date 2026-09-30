@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Exic TOPUP Store - Nepal gaming top-ups for Diamonds, UC and game credits.">
+<title>Exic TOPUP Store | Nepal Gaming Top-Up</title>
+<link rel="icon" href="assets/exic-logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="toast" class="toast"></div>
+
+<header class="header">
+  <div class="nav container">
+    <a class="brand" href="#home"><img src="assets/exic-logo.png" alt="Exic TOPUP Store"><span>EXIC <b>TOPUP</b></span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#games">Games</a><a href="#how">How it works</a><a href="#support">Support</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="cartBtn" aria-label="Cart">🛒 <i id="cartCount">0</i></button>
+      <button class="login-btn" id="openLogin">Login</button>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero container">
+  <div class="hero-copy">
+    <div class="eyebrow">🇳🇵 NEPAL'S GAMING TOP-UP STORE</div>
+    <h1>Power up your <span>game.</span><br>Play without limits.</h1>
+    <p>Fast, simple and reliable top-ups for Diamonds, UC and game credits with Nepalese pricing.</p>
+    <div class="hero-buttons"><a class="primary" href="#games">Explore games <span>→</span></a><button class="ghost" id="heroLogin">Create account</button></div>
+    <div class="trust"><span>⚡ Fast delivery</span><span>🔒 Secure checkout</span><span>🇳🇵 NPR pricing</span></div>
+  </div>
+  <div class="hero-art"><div class="orb"></div><img src="assets/exic-logo.png" alt="" class="hero-logo"></div>
+</section>
+
+<section class="ticker"><div>FREE FIRE DIAMONDS <b>•</b> PUBG MOBILE UC <b>•</b> MOBILE LEGENDS DIAMONDS <b>•</b> FAST • SAFE • TRUSTED <b>•</b> </div></section>
+
+<section class="section container" id="games">
+  <div class="section-head"><div><div class="eyebrow">TOP-UP CENTER</div><h2>Choose your game</h2></div><div class="search"><span>⌕</span><input id="search" placeholder="Search games..."></div></div>
+  <div class="game-grid" id="gameGrid"></div>
+</section>
+
+<section class="section alt" id="how">
+<div class="container">
+<div class="section-head"><div><div class="eyebrow">SIMPLE PROCESS</div><h2>Top up in 3 steps</h2></div></div>
+<div class="steps">
+  <div class="step"><strong>01</strong><h3>Pick a package</h3><p>Select your game and the amount you want.</p></div>
+  <div class="step"><strong>02</strong><h3>Enter Player ID</h3><p>Provide UID / Player ID and server ID when required. Never share your game password.</p></div>
+  <div class="step"><strong>03</strong><h3>Pay & receive</h3><p>Pay with eSewa, Khalti or bank transfer and submit your reference ID.</p></div>
+</div>
+</div></section>
+
+<section class="section container" id="support">
+<div class="support-box"><div><div class="eyebrow">NEED HELP?</div><h2>We're here for your next top-up.</h2><p>For orders, payment confirmation and support, contact Exic TOPUP Store.</p></div><button class="primary" id="supportBtn">Contact support</button></div>
+</section>
+</main>
+
+<footer><div class="container footer"><div class="brand"><img src="assets/exic-logo.png" alt="Exic"><span>EXIC <b>TOPUP</b></span></div><p>© 2026 Exic TOPUP Store. Built for Nepal gamers.</p><small>Payments and delivery are subject to store verification.</small></div></footer>
+
+<!-- Login modal -->
+<div class="modal" id="authModal"><div class="modal-card"><button class="close" data-close>×</button>
+  <div class="auth-logo"><img src="assets/exic-logo.png" alt="Exic"></div>
+  <div class="tabs"><button class="active" data-tab="login">Login</button><button data-tab="register">Create account</button></div>
+  <form id="loginForm" class="auth-form"><h2>Welcome back</h2><p>Login to view your orders and saved Player IDs.</p><input type="email" id="loginEmail" placeholder="Email address" required><input type="password" id="loginPass" placeholder="Password" required><button class="primary full">Login</button><small>Demo front-end: account data stays only in this browser.</small></form>
+  <form id="registerForm" class="auth-form hidden"><h2>Create your account</h2><p>Save orders and game IDs for faster checkout.</p><input id="regName" placeholder="Your name" required><input type="email" id="regEmail" placeholder="Email address" required><input type="password" id="regPass" placeholder="Create password" minlength="6" required><button class="primary full">Create account</button><small>Never use a password you use for banking or other important accounts.</small></form>
+</div></div>
+
+<!-- Product modal -->
+<div class="modal" id="productModal"><div class="modal-card product-card"><button class="close" data-close>×</button><div id="productContent"></div></div></div>
+
+<!-- Cart drawer -->
+<aside class="drawer" id="cartDrawer"><div class="drawer-head"><h2>Your cart</h2><button class="close" data-close>×</button></div><div id="cartItems"></div><div class="cart-total"><span>Total</span><strong id="cartTotal">Rs. 0</strong></div><button class="primary full" id="checkoutBtn">Continue to checkout</button></aside>
+<div class="scrim" id="scrim"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
